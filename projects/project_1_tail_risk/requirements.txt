@@ -1,0 +1,39 @@
+# =========================
+# DATA & FINANCE DATA
+# =========================
+pandas
+numpy
+yfinance
+
+# =========================
+# STATISTICS & ECONOMETRICS
+# =========================
+scipy
+statsmodels
+
+# GARCH models
+arch
+
+# =========================
+# MACHINE LEARNING
+# =========================
+scikit-learn
+
+# Hidden Markov Models (regimes)
+hmmlearn
+
+# =========================
+# VISUALIZATION
+# =========================
+matplotlib
+plotly
+
+# =========================
+# APP (DEPLOYMENT)
+# =========================
+streamlit
+
+# =========================
+# OPTIONAL BUT USEFUL
+# =========================
+tqdm

@@ -2,6 +2,8 @@
 venv_port_1/
 venv/
 env/
+venv_tail_risk/
+
 
 # Python
 __pycache__/
