@@ -1,4 +1,13 @@
-pip install pandas numpy scikit-learn matplotlib seaborn plotly streamlit
-pip install yfinance statsmodels xgboost
-pip install transformers sentence-transformers
-pip install pandas yfinance fredapi arch hmmlearn scipy plotly streamlit
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+plotly
+streamlit
+yfinance
+scipy
+statsmodels
+arch
+hmmlearn
+tqdm
