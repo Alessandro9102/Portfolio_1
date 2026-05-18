@@ -1,2 +1,2 @@
 # Portfolio_1
-My own first portfolio
+Mi name is Jair Alessandro Cupi Olivares, and this is my Data Science Portfolio
