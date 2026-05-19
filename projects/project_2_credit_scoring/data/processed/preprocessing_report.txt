@@ -1,0 +1,29 @@
+======================================================================
+PREPROCESSING REPORT
+======================================================================
+
+Train rows : 119,999
+Val rows   : 30,000
+Features   : 11
+Target col : SeriousDlqin2yrs
+
+Train default rate : 0.0668
+Val   default rate : 0.0668
+
+-- Outlier Caps -------------------------------------
+RevolvingUtilizationOfUnsecuredLines: 3321 rows capped at 1.0 (2.21%)
+DebtRatio: 28877 rows capped at 10.0 (19.25%)
+MonthlyIncome: 301 rows capped at 50000 (0.20%)
+NumberOfTime30-59DaysPastDueNotWorse: 269 rows capped at 90 (0.18%)
+NumberOfTime60-89DaysPastDueNotWorse: 269 rows capped at 90 (0.18%)
+NumberOfTimes90DaysLate: 269 rows capped at 90 (0.18%)
+age: 13 rows capped at 100 (0.01%)
+
+-- Imputation ---------------------------------------
+  MonthlyIncome: median -> 5400.0
+  NumberOfDependents: median -> 0.0
+
+-- Remaining Missing Values (should be 0) -----------
+  None OK
+
+======================================================================
