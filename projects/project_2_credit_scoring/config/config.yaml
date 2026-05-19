@@ -1,0 +1,99 @@
+# =============================================================================
+# config.yaml
+# Credit Scoring Pipeline — Single source of truth for all parameters.
+# Referenced by: data_preprocessing.py, feature_engineering.py,
+#                train_model.py, evaluate_model.py
+# =============================================================================
+
+# ── Reproducibility ───────────────────────────────────────────────────────────
+seed: 42
+
+# ── Data ──────────────────────────────────────────────────────────────────────
+data:
+  raw_file:       "data/raw/cs-training.csv"
+  train_file:     "data/processed/train.parquet"
+  val_file:       "data/processed/val.parquet"
+  test_size:      0.20          # stratified split fraction
+  target_col:     "SeriousDlqin2yrs"
+
+# ── Preprocessing ─────────────────────────────────────────────────────────────
+preprocessing:
+
+  # Missing value strategy per column
+  imputation:
+    MonthlyIncome:      "median"   # heavy right-skew, median safer than mean
+    NumberOfDependents: "median"
+
+  # Hard-cap outliers BEFORE imputation
+  # Values above cap → replaced with cap value
+  outlier_caps:
+    RevolvingUtilizationOfUnsecuredLines: 1.0    # utilisation > 100% is data error
+    DebtRatio:                            10.0   # extreme ratios likely erroneous
+    MonthlyIncome:                        50000  # 99.9th pct ~ $35k; cap at $50k
+    NumberOfTime30-59DaysPastDueNotWorse: 90     # 96/98 are sentinel "no answer" codes
+    NumberOfTime60-89DaysPastDueNotWorse: 90
+    NumberOfTimes90DaysLate:              90
+    age:                                  100    # remove physiologically impossible ages
+
+  # Rows to drop (filters applied after capping)
+  drop_filters:
+    age_min: 18          # borrowers must be adults
+
+  # Columns to drop from the dataset entirely
+  drop_cols:
+    - "Unnamed: 0"       # Kaggle row index artifact
+
+# ── Feature Engineering ───────────────────────────────────────────────────────
+feature_engineering:
+  # Interaction terms to create (col_a * col_b)
+  interactions:
+    - ["RevolvingUtilizationOfUnsecuredLines", "DebtRatio"]
+    - ["NumberOfTimes90DaysLate", "DebtRatio"]
+
+  # Log transform columns (log1p) to reduce skew
+  log_transform:
+    - "MonthlyIncome"
+    - "DebtRatio"
+    - "RevolvingUtilizationOfUnsecuredLines"
+
+  scaler: "StandardScaler"   # fitted on train only — no leakage
+
+# ── Models ────────────────────────────────────────────────────────────────────
+models:
+
+  logistic_regression:
+    C:            0.1
+    max_iter:     1000
+    class_weight: "balanced"
+    solver:       "lbfgs"
+
+  xgboost:
+    n_estimators:      500
+    max_depth:         5
+    learning_rate:     0.05
+    subsample:         0.8
+    colsample_bytree:  0.8
+    min_child_weight:  10
+    scale_pos_weight:  14      # approx ratio of negatives/positives (~6.7% default rate)
+    eval_metric:       "auc"
+    early_stopping_rounds: 30
+    use_label_encoder: false
+    random_state:      42
+
+  stacking:
+    final_estimator:   "LogisticRegression"
+    cv:                5
+    passthrough:       false
+
+# ── Evaluation ────────────────────────────────────────────────────────────────
+evaluation:
+  threshold_range:    [0.1, 0.9]   # range for threshold analysis table
+  threshold_steps:    17
+  figures_dir:        "reports/figures"
+  report_file:        "reports/credit_scoring_report.md"
+
+# ── Streamlit App ─────────────────────────────────────────────────────────────
+app:
+  model_path:   "models/model.pkl"
+  scaler_path:  "models/scaler.pkl"
+  port:         8501
