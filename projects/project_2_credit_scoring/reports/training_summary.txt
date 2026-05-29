@@ -1,0 +1,38 @@
+============================================================
+TRAINING SUMMARY
+============================================================
+
+Features used : 22
+
+-- Validation AUC by model --
+  LogisticRegression   AUC=0.8616  Gini=0.7233
+  XGBoost              AUC=0.8698  Gini=0.7396
+  Stacking             AUC=0.8695  Gini=0.7391
+
+Best model    : XGBoost  (AUC=0.8698)
+
+-- Features --
+  RevolvingUtilizationOfUnsecuredLines
+  age
+  NumberOfTime30-59DaysPastDueNotWorse
+  DebtRatio
+  MonthlyIncome
+  NumberOfOpenCreditLinesAndLoans
+  NumberOfTimes90DaysLate
+  NumberRealEstateLoansOrLines
+  NumberOfTime60-89DaysPastDueNotWorse
+  NumberOfDependents
+  total_delinquencies
+  max_delinquency_band
+  ever_90_days_late
+  monthly_debt_payment
+  debt_to_income_safe
+  utilisation_per_line
+  age_x_utilisation
+  RevolvingUtilizationOfUnsecuredLines_x_DebtRatio
+  NumberOfTimes90DaysLate_x_DebtRatio
+  MonthlyIncome_log
+  DebtRatio_log
+  RevolvingUtilizationOfUnsecuredLines_log
+
+============================================================
