@@ -1,5 +1,7 @@
 # Tail Risk & Regime-Switching Volatility Model
 
+**Live demo:** https://portfolio1-mlhpqrktcglrqphganqyw2.streamlit.app/
+
 Market risk model for equity portfolios that estimates Value at Risk (VaR) and Expected Shortfall (ES) by combining regime detection, conditional volatility modeling, and Extreme Value Theory. The model is validated with formal statistical backtests and deployed as an interactive Streamlit dashboard.
 
 ## Motivation
@@ -87,6 +89,8 @@ python src/regime_model.py
 # Launch the interactive dashboard
 streamlit run app/streamlit_app.py
 ```
+
+A hosted version of this dashboard is available at: https://portfolio1-mlhpqrktcglrqphganqyw2.streamlit.app/
 
 Configuration (tickers, date range, HMM states, EVT threshold, VaR confidence levels, backtesting window) is centralized in `config.py`; no parameters are hard-coded inside the modeling functions.
 
