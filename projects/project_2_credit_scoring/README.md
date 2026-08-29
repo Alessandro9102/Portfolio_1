@@ -1,5 +1,7 @@
 # Credit Scoring — Give Me Some Credit
 
+**Live demo:** https://portfolio1-nxuhzaczdytwlnxwbayhxw.streamlit.app/
+
 End-to-end credit risk classification pipeline built on the Kaggle "Give Me Some Credit" dataset, predicting the probability that a borrower will experience serious delinquency within two years. The project covers data cleaning, feature engineering, model comparison, statistical validation, and explainability, and is deployed as an interactive Streamlit scoring tool.
 
 ## Overview
@@ -96,6 +98,8 @@ python src/evaluate_model.py
 # 3. Launch the interactive scorer
 streamlit run app/streamlit_app.py
 ```
+
+A hosted version of this scorer is available at: https://portfolio1-nxuhzaczdytwlnxwbayhxw.streamlit.app/
 
 ## Interview Talking Points
 
