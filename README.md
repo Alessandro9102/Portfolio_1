@@ -24,12 +24,14 @@ Portfolio_1/
 ### 1. Tail Risk & Regime-Switching Volatility Model
 Statistical model of equity tail risk that combines a Hidden Markov Model for market regime detection, regime-conditional GARCH(1,1) volatility, and Extreme Value Theory (Generalized Pareto Distribution) for the estimation of Value at Risk and Expected Shortfall. VaR estimates are validated with the Kupiec Proportion of Failures test and classified under the Basel traffic-light framework.
 
-See: [`projects/project_1_tail_risk/README.md`](projects/project_1_tail_risk/README.md)
+Live demo: https://portfolio1-mlhpqrktcglrqphganqyw2.streamlit.app/
+Details: [`projects/project_1_tail_risk/README.md`](projects/project_1_tail_risk/README.md)
 
 ### 2. Credit Scoring — Give Me Some Credit
 End-to-end credit risk pipeline on the Kaggle "Give Me Some Credit" dataset (150,000 borrowers). Includes outlier treatment, class-imbalance handling, feature engineering, and a comparison of Logistic Regression, XGBoost, and a stacking ensemble, evaluated with AUC, Gini, and Kolmogorov-Smirnov statistics, plus SHAP-based explainability.
 
-See: [`projects/project_2_credit_scoring/README.md`](projects/project_2_credit_scoring/README.md)
+Live demo: https://portfolio1-nxuhzaczdytwlnxwbayhxw.streamlit.app/
+Details: [`projects/project_2_credit_scoring/README.md`](projects/project_2_credit_scoring/README.md)
 
 ### 3. Project 3 (in progress)
 Placeholder for an upcoming project. Structure is scaffolded but not yet implemented.
