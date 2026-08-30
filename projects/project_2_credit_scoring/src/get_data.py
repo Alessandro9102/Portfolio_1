@@ -1,9 +1,6 @@
 """
-get_data.py
------------
-Step 1: Download the Give Me Some Credit dataset from Kaggle.
 
-Usage (from project_2_credit_scoring/):
+Usage:
     python src/get_data.py
 
 Requirements:
