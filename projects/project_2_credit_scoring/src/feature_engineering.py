@@ -1,8 +1,5 @@
 """
 
------------------------
-Step 3: Build domain-driven features and scale them.
-
 Pipeline (in order):
   1. Load train.parquet / val.parquet  (output of data_preprocessing.py)
   2. Build delinquency aggregate features
@@ -12,7 +9,7 @@ Pipeline (in order):
   6. Fit StandardScaler on TRAIN only  -> apply to both  (no leakage)
   7. Save engineered sets + scaler
 
-Usage (from project_2_credit_scoring/):
+Usage:
     python src/feature_engineering.py
 
 Outputs:
