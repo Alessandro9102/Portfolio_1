@@ -1,6 +1,4 @@
 """
-utils.py
---------
 Shared utility functions used across all pipeline steps.
 
 Covers:
