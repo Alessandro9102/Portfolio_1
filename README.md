@@ -13,7 +13,7 @@ Portfolio_1/
 ├── projects/
 │   ├── project_1_tail_risk/        Market risk modeling: regime detection, GARCH volatility, EVT tail risk, VaR backtesting
 │   ├── project_2_credit_scoring/   Credit risk classification: logistic regression, XGBoost, stacking ensemble, SHAP explainability
-│   └── project_3_xxx/              Reserved for an upcoming project (in progress)
+│
 ├── shared/                         Shared utilities and plotting helpers used across projects
 ├── requirements.txt                Consolidated dependencies for the full portfolio
 └── README.md
@@ -33,8 +33,6 @@ End-to-end credit risk pipeline on the Kaggle "Give Me Some Credit" dataset (150
 Live demo: https://portfolio1-nxuhzaczdytwlnxwbayhxw.streamlit.app/
 Details: [`projects/project_2_credit_scoring/README.md`](projects/project_2_credit_scoring/README.md)
 
-### 3. Project 3 (in progress)
-Placeholder for an upcoming project. Structure is scaffolded but not yet implemented.
 
 ## Technical Stack
 
