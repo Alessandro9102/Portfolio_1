@@ -1,8 +1,4 @@
 """
-streamlit_app.py
-----------------
-Step 6: Interactive credit scoring demo.
-
 Features:
   - Borrower profile input via sidebar sliders
   - Default probability gauge
@@ -10,7 +6,7 @@ Features:
   - SHAP waterfall explanation for the prediction
   - Threshold sensitivity table
 
-Usage (from project_2_credit_scoring/):
+Usage:
     streamlit run app/streamlit_app.py
 
 Requirements:
