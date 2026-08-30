@@ -1,8 +1,4 @@
 """
-evaluate_model.py
------------------
-Step 5: Evaluate the stacking ensemble with full credit-risk metrics.
-
 Metrics produced:
   - ROC-AUC
   - Gini coefficient  (= 2 * AUC - 1,  industry standard)
@@ -12,8 +8,8 @@ Metrics produced:
   - SHAP waterfall     (single borrower explanation)
   - ROC curve plot
 
-Usage (from project_2_credit_scoring/):
-    python src/evaluate_model.py
+Usage:
+python src/evaluate_model.py
 
 Outputs:
     reports/figures/roc_curve.png
