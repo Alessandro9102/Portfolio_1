@@ -1,7 +1,4 @@
 """
-train_model.py
---------------
-Step 4: Train three models in sequence.
 
 Stages:
   1. Logistic Regression  -- interpretable baseline
@@ -9,9 +6,8 @@ Stages:
   3. Stacking Ensemble    -- LR + XGB base learners, LR meta-learner
 
 All hyperparameters are read from config/config.yaml.
-No magic numbers in this file.
 
-Usage (from project_2_credit_scoring/):
+Usage:
     python src/train_model.py
 
 Outputs:
