@@ -290,7 +290,7 @@ st.markdown("---")
 # ═══════════════════════════════════════════════
 
 tab1, tab2, tab3, tab4, tab5 = st.tabs([
-    "1. Regimes",
+    ":material/bar_chart: Regimes",
     "2. Volatility",
     "3. VaR & ES",
     "4. Tail Fit",
