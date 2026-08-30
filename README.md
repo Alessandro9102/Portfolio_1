@@ -14,7 +14,6 @@ Portfolio_1/
 │   ├── project_1_tail_risk/        Market risk modeling: regime detection, GARCH volatility, EVT tail risk, VaR backtesting
 │   ├── project_2_credit_scoring/   Credit risk classification: logistic regression, XGBoost, stacking ensemble, SHAP explainability
 │
-├── shared/                         Shared utilities and plotting helpers used across projects
 ├── requirements.txt                Consolidated dependencies for the full portfolio
 └── README.md
 ```
