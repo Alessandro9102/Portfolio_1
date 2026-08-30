@@ -1,8 +1,4 @@
 """
-data_preprocessing.py
----------------------
-Step 2: Clean the raw CSV and produce stratified train / val splits.
-
 Pipeline (in order):
   1. Load raw CSV
   2. Drop junk columns (Kaggle row-index artifact)
@@ -12,7 +8,7 @@ Pipeline (in order):
   6. Stratified train / val split
   7. Save to data/processed/ as Parquet (fast, typed, compressed)
 
-Usage (from project_2_credit_scoring/):
+Usage:
     python src/data_preprocessing.py
 
 Outputs:
