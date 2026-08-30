@@ -290,11 +290,11 @@ st.markdown("---")
 # ═══════════════════════════════════════════════
 
 tab1, tab2, tab3, tab4, tab5 = st.tabs([
-    ":material/bar_chart: Regimes",
-    "2. Volatility",
-    "3. VaR & ES",
-    "4. Tail Fit",
-    "5. Backtest",
+     ":material/bar_chart: Regimes",
+    ":material/water: Volatility",
+    ":material/trending_down: VaR & ES",
+    ":material/science: Tail Fit",
+    ":material/check_circle: Backtest",
 ])
 
 
